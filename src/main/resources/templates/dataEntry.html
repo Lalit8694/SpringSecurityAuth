@@ -1,0 +1,42 @@
+	<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org" th:replace="reusablecode::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<section>
+<div class="container">
+<div class="row">
+<div class="col-md-6 offset-md-3" >
+<div class="card">
+<div class="card-header text-center fs-4">Data Entry page</div>
+<th:block th:if="${session.msg}">
+<p class="text-center fs-3 text-success">[[${session.msg}]] <p/>
+
+</th:block>
+<div class="card-body">
+
+<form action="createUser" method="post">
+<div class="md-3"> 
+<label>Enter the full name</label>
+<input type="text" name="fullName" class="form-control">
+</div>
+<div class="md-3">
+<label>Enter the password</label>
+<input type="text" name="password" class="form-control">
+</div>
+
+<button class="btn btn-primary col-md-12">UserEntry</button>
+</form>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+</body>
+</html>
